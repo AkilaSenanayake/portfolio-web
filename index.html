@@ -6,6 +6,83 @@
     <title>home</title>
     <link rel="stylesheet" href="css/nicepage.css" media="screen">
     <link rel="stylesheet" href="css/home.css" media="screen">
+    <style>
+      /* Responsive styles */
+      @media screen and (max-width: 768px) {
+        /* Header adjustments */
+        .u-header {
+          padding: 10px 0;
+        }
+        .u-logo-image {
+          width: 80px !important;
+        }
+        
+        /* Main content adjustments */
+        .u-layout-row {
+          flex-direction: column !important;
+        }
+        .u-layout-cell {
+          width: 100% !important;
+          padding: 20px !important;
+        }
+        .u-image-1 {
+          width: 280px !important;
+          height: 347px !important;
+          margin: 0 auto !important;
+        }
+        
+        /* Button container adjustments */
+        .u-container-layout-1 > div {
+          margin: 20px auto !important;
+          justify-content: center !important;
+        }
+        
+        /* Text adjustments */
+        .u-text-1 {
+          font-size: 16px !important;
+          padding: 0 15px !important;
+        }
+        .u-text-1 span[style*="font-size: 35px"] {
+          font-size: 28px !important;
+        }
+        .u-text-1 span[style*="font-size: 45px"] {
+          font-size: 32px !important;
+        }
+        
+        /* Contact section adjustments */
+        #contact-section > div {
+          margin: 0 15px !important;
+          gap: 40px !important;
+        }
+        #contact-section > div > div {
+          margin-left: 0 !important;
+          width: 100% !important;
+        }
+        
+        /* Form adjustments */
+        #contactForm {
+          width: 100% !important;
+        }
+        #contactForm input,
+        #contactForm textarea {
+          width: 100% !important;
+        }
+      }
+      
+      /* Additional mobile optimizations */
+      @media screen and (max-width: 480px) {
+        .u-image-1 {
+          width: 240px !important;
+          height: 297px !important;
+        }
+        .u-text-1 span[style*="font-size: 35px"] {
+          font-size: 24px !important;
+        }
+        .u-text-1 span[style*="font-size: 45px"] {
+          font-size: 28px !important;
+        }
+      }
+    </style>
     <script class="u-script" type="text/javascript" src="js/jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="js/nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 5.19.2, nicepage.com">
