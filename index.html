@@ -6,305 +6,53 @@
     <title>home</title>
     <link rel="stylesheet" href="css/nicepage.css" media="screen">
     <link rel="stylesheet" href="css/home.css" media="screen">
-    <link rel="stylesheet" href="css/mobile.css" media="screen">
     <style>
-      /* ===== RESPONSIVE STYLES ===== */
-      /* Media query for tablets and smaller devices (max-width: 768px) */
-      @media screen and (max-width: 768px) {
-        /* ===== HEADER STYLES ===== */
-        /* Header container adjustments */
-        .u-header {
-          padding: 10px 0;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          position: relative;
-        }
-
-        /* Logo image centering */
-        .u-logo-image {
-          width: 120px !important;
-          height: auto !important;
-          margin: 0 auto !important;
-          display: block !important;
-        }
-        
-        /* ===== MOBILE MENU BUTTON ===== */
-        /* Menu button positioning and styling */
-        .menu-collapse {
-          position: absolute !important;
-          right: 20px !important;
-          top: 20px !important;
-          transform: none !important;
-          z-index: 1000 !important;
-        }
-        
-        /* ===== SIDEBAR MENU ===== */
-        /* Sidebar container styling */
-        .u-sidenav {
-          position: fixed !important;
-          top: 0 !important;
-          right: -300px !important;
-          width: 300px !important;
-          height: 100vh !important;
-          background: #fff !important;
-          box-shadow: -2px 0 10px rgba(0,0,0,0.1) !important;
-          transition: right 0.3s ease-in-out !important;
-          z-index: 999 !important;
-          padding: 60px 20px 20px !important;
-        }
-        
-        /* Active state for sidebar */
-        .u-sidenav.active {
-          right: 0 !important;
-        }
-        
-        /* Navigation menu styling */
-        .u-sidenav .u-nav {
-          display: flex !important;
-          flex-direction: column !important;
-          gap: 15px !important;
-        }
-        
-        /* Navigation items styling */
-        .u-sidenav .u-nav li {
-          width: 100% !important;
-        }
-        
-        /* Navigation links styling */
-        .u-sidenav .u-nav li a {
-          display: block !important;
-          padding: 12px 15px !important;
-          font-size: 18px !important;
-          color: #333 !important;
-          text-decoration: none !important;
-          border-radius: 8px !important;
-          transition: all 0.3s ease !important;
-        }
-        
-        /* Navigation links hover effect */
-        .u-sidenav .u-nav li a:hover {
-          background: #f0f0f0 !important;
-          color: #0000ff !important;
-        }
-        
-        /* ===== MENU OVERLAY ===== */
-        /* Overlay background when menu is open */
-        .u-menu-overlay {
-          display: none;
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: rgba(0,0,0,0.5);
-          z-index: 998;
-        }
-        
-        /* Active state for overlay */
-        .u-menu-overlay.active {
-          display: block;
-        }
-        
-        /* ===== MAIN CONTENT LAYOUT ===== */
-        /* Layout row adjustments */
-        .u-layout-row {
-          flex-direction: column !important;
-          align-items: center !important;
-          gap: 30px !important;
-        }
-        
-        /* Layout cell adjustments */
-        .u-layout-cell {
-          width: 100% !important;
-          padding: 0 20px !important;
-          display: flex !important;
-          flex-direction: column !important;
-          align-items: center !important;
-        }
-
-        /* Profile image container */
-        .u-container-layout-1 {
-          margin-top: -300px !important;
-          display: flex !important;
-          flex-direction: column !important;
-          align-items: center !important;
-          gap: 30px !important;
-        }
-
-        /* Profile image */
-        .u-image-1 {
-          width: 280px !important;
-          height: auto !important;
-          margin: 0 auto !important;
-          border-radius: 20px !important;
-        }
-
-        /* Social buttons container */
-        .u-container-layout-1 > div {
-          margin: 30px auto !important;
-          justify-content: center !important;
-          width: 100% !important;
-          display: flex !important;
-          flex-direction: row !important;
-          align-items: center !important;
-          gap: 15px !important;
-          position: relative !important;
-          top: 0 !important;
-        }
-        
-        /* ===== TEXT CONTENT ===== */
-        /* Main text container adjustments */
-        .u-text-1 {
-          font-size: 16px !important;
-          padding: 0 15px !important;
-          margin-top: -300px !important;
-          margin-bottom: 40px !important;
-          text-align: center !important;
-        }
-        
-        /* Keep name text centered */
-        .u-text-1 span[style*="font-size: 35px"],
-        .u-text-1 span[style*="font-size: 45px"] {
-          text-align: center !important;
-          display: block !important;
-        }
-        
-        /* Text size adjustments for different screen sizes */
-        .u-text-1 span[style*="font-size: 35px"] {
-          font-size: 17px !important;
-        }
-        .u-text-1 span[style*="font-size: 45px"] {
-          font-size: 25px !important;
-        }
-        
-        /* ===== CONTACT SECTION ===== */
-        /* Contact section container adjustments */
-        #contact-section > div {
-          margin: 0 15px !important;
-          gap: 40px !important;
-          flex-direction: column !important;
-        }
-        
-        /* Contact section inner div adjustments */
-        #contact-section > div > div {
-          margin-left: 0 !important;
-          width: 100% !important;
-        }
-        
-        /* ===== FORM ELEMENTS ===== */
-        /* Contact form width adjustment */
-        #contactForm {
-          width: 100% !important;
-        }
-        
-        /* Form input and textarea adjustments */
-        #contactForm input,
-        #contactForm textarea {
-          width: 100% !important;
-        }
+      /* Mobile Message Overlay */
+      .mobile-message {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #F0F0F0;
+        z-index: 99999;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
       }
-      
-      /* ===== MOBILE OPTIMIZATIONS ===== */
-      /* Media query for mobile devices (max-width: 480px) */
-      @media screen and (max-width: 480px) {
-        /* Logo size for smaller screens */
-        .u-logo-image {
-          width: 100px !important;
-        }
 
-        /* Profile image container for mobile */
-        .u-container-layout-1 {
-          margin-top: 20px !important;
-          gap: 0 !important;
-          padding: 0 !important;
-        }
+      .mobile-message img {
+        width: 150px;
+        height: auto;
+        margin-bottom: 30px;
+      }
 
-        /* Profile image size for smaller screens */
-        .u-image-1 {
-          width: 240px !important;
-          height: auto !important;
-          margin: 0 auto !important;
-        }
+      .mobile-message p {
+        font-size: 12px;
+        color: #1200ff;
+        margin: 0;
+        line-height: 1.4;
+      }
 
-        /* Name text adjustments for mobile */
-        .u-text-1 span[style*="font-size: 35px"] {
-          font-size: 10px !important;
-          display: inline !important;
+      @media screen and (max-width: 768px) {
+        .mobile-message {
+          display: flex;
         }
-        .u-text-1 span[style*="font-size: 45px"] {
-          font-size: 22px !important;
-          display: inline !important;
-        }
-        .u-text-1 br {
+        body > *:not(.mobile-message) {
           display: none !important;
+          visibility: hidden !important;
+          opacity: 0 !important;
         }
-
-        /* Social buttons container for smaller screens */
-        .u-container-layout-1 > div {
-          flex-direction: column !important;
-          gap: 10px !important;
-          margin: 20px auto !important;
-        }
-
-        /* Set exactly 3cm gap between profile image and paragraph */
-        .u-layout-cell-2 {
-          margin-top: 113px !important; /* 3cm = 113px */
-          padding: 0 !important;
-        }
-
-        /* Remove all other margins and paddings */
-        .u-text-1 {
+        html, body {
+          overflow: hidden !important;
           margin: 0 !important;
           padding: 0 !important;
-        }
-
-        .u-container-layout-2 {
-          padding: 0 !important;
-        }
-
-        .u-layout-cell {
-          padding: 0 !important;
-        }
-      }
-
-      @media (max-width: 767px) {
-        .main-content, .u-section-1, .profile-section {
-          padding-top: 48px !important; /* Add space below logo/menu */
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .profile-image {
-          margin-top: 24px;
-          margin-bottom: 24px;
-          display: block;
-          max-width: 90vw;
-          height: auto;
-          border-radius: 16px;
-        }
-
-        .intro-text, .u-text {
-          text-align: center;
-          margin-bottom: 24px;
-          margin-top: 0;
-          font-size: 16px;
-          line-height: 1.5;
-        }
-
-        .button-group, .social-buttons {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          gap: 16px;
-          margin-bottom: 32px;
-        }
-
-        .button-group a, .social-buttons a {
-          font-size: 16px;
-          padding: 10px 20px;
-          border-radius: 24px;
+          height: 100% !important;
+          width: 100% !important;
         }
       }
     </style>
@@ -353,18 +101,16 @@
     }
     </script><meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
   <body class="u-body u-overlap u-xl-mode" data-lang="en" style="background-color:#F0F0F0;">
+    <!-- Mobile Message Overlay -->
+    <div class="mobile-message">
+      <img src="images/logo2.png" alt="Logo">
+      <p>This web page only visible for desktop yet.</p>
+    </div>
     <header class="u-align-left u-clearfix u-header" id="sec-c103"><div class="u-clearfix u-sheet u-sheet-1">
         <a href="index.html" class="u-align-center-sm u-align-center-xs u-image u-logo u-image-1" title="HOME">
           <img src="images/logo2.png" class="u-logo-image u-logo-image-1" data-image-width="100">
         </a>
         <nav class="u-align-left u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="MD">
-          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
-            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-grey-60" href="#">
-              <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 302 302" style="undefined"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-8a8f"></use></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="svg-8a8f" x="0px" y="0px" viewBox="0 0 302 302" style="enable-background:new 0 0 302 302;" xml:space="preserve" class="u-svg-content"><g><rect y="36" width="302" height="30"></rect><rect y="236" width="302" height="30"></rect><rect y="136" width="302" height="30"></rect>
-</g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-            </a>
-          </div>
           <div class="u-custom-menu u-nav-container">
             <ul class="u-nav u-spacing-0 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-60 u-text-hover-palette-2-base" href="index.html" style="padding: 10px 20px; color: #000; transition: color 0.2s ease;" onmouseover="this.style.color='#1200ff'" onmouseout="this.style.color='#000'">home</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-60 u-text-hover-palette-2-base" href="#about-section" style="padding: 10px 20px; color: #000; transition: color 0.2s ease;" onmouseover="this.style.color='#1200ff'" onmouseout="this.style.color='#000'">about</a>
@@ -379,16 +125,6 @@
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-60 u-text-hover-palette-2-base" href="#contact-section" style="padding: 10px 20px; color: #000; transition: color 0.2s ease;" onmouseover="this.style.color='#1200ff'" onmouseout="this.style.color='#000'">contact</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-60 u-text-hover-palette-2-base" href="https://www.linkedin.com/in/akila-senanayake/" target="_blank" style="padding: 10px 20px; color: #000; transition: color 0.2s ease;" onmouseover="this.style.color='#1200ff'" onmouseout="this.style.color='#000'">connect in</a>
 </li></ul>
-          </div>
-          <div class="u-custom-menu u-nav-container-collapse">
-            <div class="u-align-center u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
-              <div class="u-inner-container-layout u-sidenav-overflow">
-                
-
-</li></ul>
-              </div>
-            </div>
-            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
           </div>
         </nav>
       </div></header>
@@ -567,74 +303,11 @@ http://dilshan.me -->
 var sc_invisible=1; 
 var sc_security="d34c140e"; </script>
           <script type="text/javascript" src="js/counter.js" async="async"></script>
-          <noscript>&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;div class="statcounter"&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;/a&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;</noscript><!-- End of Statcounter Code -->
+          <noscript>&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;div class="statcounter"&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;/a&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;</noscript><!-- End of Statcounter Code -->
         </div>
         <div class="u-border-1 u-border-grey-15 u-line u-line-horizontal u-line-1"></div>
         <p class="u-text u-text-default u-text-grey-30 u-text-1">2025 | Akila Senanayake. All rights reserved.</p>
         <br>
 
       </div></footer>
-  
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const menuButton = document.querySelector('.menu-collapse');
-        const sidenav = document.querySelector('.u-sidenav');
-        const overlay = document.querySelector('.u-menu-overlay');
-        
-        menuButton.addEventListener('click', function(e) {
-          e.preventDefault();
-          sidenav.classList.toggle('active');
-          overlay.classList.toggle('active');
-          document.body.style.overflow = sidenav.classList.contains('active') ? 'hidden' : '';
-        });
-        
-        overlay.addEventListener('click', function() {
-          sidenav.classList.remove('active');
-          overlay.classList.remove('active');
-          document.body.style.overflow = '';
-        });
-      });
-    </script>
-    <div class="mobile-footer-text">2025 | Akila Senanayake. All rights reserved.</div>
-    
-    <!-- Mobile Menu Button -->
-    <button class="mobile-menu-button">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <!-- Mobile Sidebar -->
-    <div class="mobile-sidebar">
-      <ul class="mobile-nav">
-        <li><a href="index.html">home</a></li>
-        <li><a href="#about-section">about</a></li>
-        <li><a href="#sec-c7f0">blogs</a></li>
-        <li><a href="https://www.linkedin.com/in/akila-senanayake/details/projects/" target="_blank">projects</a></li>
-        <li><a href="#contact-section">contact</a></li>
-        <li><a href="https://www.linkedin.com/in/akila-senanayake/" target="_blank">connect in</a></li>
-      </ul>
-    </div>
-
-    <!-- Mobile Overlay -->
-    <div class="mobile-overlay"></div>
-
-    <script>
-      // Mobile menu functionality
-      const mobileMenuButton = document.querySelector('.mobile-menu-button');
-      const mobileSidebar = document.querySelector('.mobile-sidebar');
-      const mobileOverlay = document.querySelector('.mobile-overlay');
-
-      mobileMenuButton.addEventListener('click', () => {
-        mobileSidebar.classList.toggle('active');
-        mobileOverlay.classList.toggle('active');
-        document.body.style.overflow = mobileSidebar.classList.contains('active') ? 'hidden' : '';
-      });
-
-      mobileOverlay.addEventListener('click', () => {
-        mobileSidebar.classList.remove('active');
-        mobileOverlay.classList.remove('active');
-        document.body.style.overflow = '';
-      });
-    </script>
 </body></html>
