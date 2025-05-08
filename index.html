@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="css/nicepage.css" media="screen">
 <link rel="stylesheet" href="css/home.css" media="screen">
     <style>
-      /* Responsive styles */
+      /* ===== RESPONSIVE STYLES ===== */
+      /* Media query for tablets and smaller devices (max-width: 768px) */
       @media screen and (max-width: 768px) {
-        /* Header adjustments */
+        /* ===== HEADER STYLES ===== */
+        /* Header container adjustments */
         .u-header {
           padding: 10px 0;
           display: flex;
@@ -17,13 +19,16 @@
           align-items: center;
           position: relative;
         }
+        
+        /* Logo image size adjustments */
         .u-logo-image {
           width: 80px !important;
           height: auto !important;
           margin: 0 auto !important;
         }
         
-        /* Menu button positioning */
+        /* ===== MOBILE MENU BUTTON ===== */
+        /* Menu button positioning and styling */
         .menu-collapse {
           position: absolute !important;
           right: 20px !important;
@@ -32,7 +37,8 @@
           z-index: 1000 !important;
         }
         
-        /* Sidebar menu styles */
+        /* ===== SIDEBAR MENU ===== */
+        /* Sidebar container styling */
         .u-sidenav {
           position: fixed !important;
           top: 0 !important;
@@ -46,20 +52,24 @@
           padding: 60px 20px 20px !important;
         }
         
+        /* Active state for sidebar */
         .u-sidenav.active {
           right: 0 !important;
         }
         
+        /* Navigation menu styling */
         .u-sidenav .u-nav {
           display: flex !important;
           flex-direction: column !important;
           gap: 15px !important;
         }
         
+        /* Navigation items styling */
         .u-sidenav .u-nav li {
           width: 100% !important;
         }
         
+        /* Navigation links styling */
         .u-sidenav .u-nav li a {
           display: block !important;
           padding: 12px 15px !important;
@@ -70,12 +80,14 @@
           transition: all 0.3s ease !important;
         }
         
+        /* Navigation links hover effect */
         .u-sidenav .u-nav li a:hover {
           background: #f0f0f0 !important;
           color: #0000ff !important;
         }
         
-        /* Overlay when menu is open */
+        /* ===== MENU OVERLAY ===== */
+        /* Overlay background when menu is open */
         .u-menu-overlay {
           display: none;
           position: fixed;
@@ -87,15 +99,19 @@
           z-index: 998;
         }
         
+        /* Active state for overlay */
         .u-menu-overlay.active {
           display: block;
         }
         
-        /* Main content adjustments */
+        /* ===== MAIN CONTENT LAYOUT ===== */
+        /* Layout row adjustments */
         .u-layout-row {
           flex-direction: column !important;
           align-items: center !important;
         }
+        
+        /* Layout cell adjustments */
         .u-layout-cell {
           width: 100% !important;
           top: -20px !important;
@@ -104,19 +120,24 @@
           flex-direction: column !important;
           align-items: center !important;
         }
+        
+        /* Profile image adjustments */
         .u-image-1 {
           width: 280px !important;
           height: 347px !important;
           margin: 0 auto !important;
         }
         
-        /* Text adjustments */
+        /* ===== TEXT CONTENT ===== */
+        /* Main text container adjustments */
         .u-text-1 {
           font-size: 16px !important;
           padding: 0 15px !important;
           margin-top: -20px !important;
           margin-bottom: 40px !important;
         }
+        
+        /* Text size adjustments for different screen sizes */
         .u-text-1 span[style*="font-size: 35px"] {
           font-size: 28px !important;
         }
@@ -124,26 +145,33 @@
           font-size: 32px !important;
         }
         
-        /* Contact section adjustments */
+        /* ===== CONTACT SECTION ===== */
+        /* Contact section container adjustments */
         #contact-section > div {
           margin: 0 15px !important;
           gap: 40px !important;
         }
+        
+        /* Contact section inner div adjustments */
         #contact-section > div > div {
           margin-left: 0 !important;
           width: 100% !important;
         }
         
-        /* Form adjustments */
+        /* ===== FORM ELEMENTS ===== */
+        /* Contact form width adjustment */
         #contactForm {
           width: 100% !important;
         }
+        
+        /* Form input and textarea adjustments */
         #contactForm input,
         #contactForm textarea {
           width: 100% !important;
         }
         
-        /* Button container adjustments */
+        /* ===== BUTTON CONTAINER ===== */
+        /* Button container layout adjustments */
         .u-container-layout-1 > div {
           margin: 20px auto !important;
           justify-content: center !important;
@@ -159,12 +187,16 @@
         }
       }
       
-      /* Additional mobile optimizations */
+      /* ===== MOBILE OPTIMIZATIONS ===== */
+      /* Media query for mobile devices (max-width: 480px) */
       @media screen and (max-width: 480px) {
+        /* Profile image size for mobile */
         .u-image-1 {
           width: 240px !important;
           height: 297px !important;
         }
+        
+        /* Text size adjustments for mobile */
         .u-text-1 span[style*="font-size: 35px"] {
           font-size: 24px !important;
         }
