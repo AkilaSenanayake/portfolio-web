@@ -15,16 +15,17 @@
         .u-header {
           padding: 10px 0;
           display: flex;
-          justify-content: space-between;
+          justify-content: center;
           align-items: center;
           position: relative;
         }
-        
-        /* Logo image size adjustments */
+
+        /* Logo image centering */
         .u-logo-image {
-          width: 80px !important;
+          width: 120px !important;
           height: auto !important;
           margin: 0 auto !important;
+          display: block !important;
         }
         
         /* ===== MOBILE MENU BUTTON ===== */
@@ -32,7 +33,7 @@
         .menu-collapse {
           position: absolute !important;
           right: 20px !important;
-          top: -250px !important;
+          top: 20px !important;
           transform: none !important;
           z-index: 1000 !important;
         }
@@ -109,23 +110,46 @@
         .u-layout-row {
           flex-direction: column !important;
           align-items: center !important;
+          gap: 30px !important;
         }
         
         /* Layout cell adjustments */
         .u-layout-cell {
           width: 100% !important;
-          top: -20px !important;
-          padding: 20px !important;
+          padding: 0 20px !important;
           display: flex !important;
           flex-direction: column !important;
           align-items: center !important;
         }
-        
-        /* Profile image adjustments */
+
+        /* Profile image container */
+        .u-container-layout-1 {
+          margin-top: -250px !important;
+          display: flex !important;
+          flex-direction: column !important;
+          align-items: center !important;
+          gap: 30px !important;
+        }
+
+        /* Profile image */
         .u-image-1 {
           width: 280px !important;
-          height: 347px !important;
+          height: auto !important;
           margin: 0 auto !important;
+          border-radius: 20px !important;
+        }
+
+        /* Social buttons container */
+        .u-container-layout-1 > div {
+          margin: 30px auto !important;
+          justify-content: center !important;
+          width: 100% !important;
+          display: flex !important;
+          flex-direction: row !important;
+          align-items: center !important;
+          gap: 15px !important;
+          position: relative !important;
+          top: 0 !important;
         }
         
         /* ===== TEXT CONTENT ===== */
@@ -133,8 +157,9 @@
         .u-text-1 {
           font-size: 16px !important;
           padding: 0 15px !important;
-          margin-top: -20px !important;
+          margin-top: 30px !important;
           margin-bottom: 40px !important;
+          text-align: center !important;
         }
         
         /* Text size adjustments for different screen sizes */
@@ -150,6 +175,7 @@
         #contact-section > div {
           margin: 0 15px !important;
           gap: 40px !important;
+          flex-direction: column !important;
         }
         
         /* Contact section inner div adjustments */
@@ -169,39 +195,55 @@
         #contactForm textarea {
           width: 100% !important;
         }
-        
-        /* ===== BUTTON CONTAINER ===== */
-        /* Button container layout adjustments */
-        .u-container-layout-1 > div {
-          margin: 20px auto !important;
-          justify-content: center !important;
-          width: 100% !important;
-          display: flex !important;
-          flex-direction: row !important;
-          align-items: center !important;
-          gap: 15px !important;
-          position: relative !important;
-          top: 0 !important;
-          margin-right: 0 !important;
-          margin-left: 0 !important;
-        }
       }
       
       /* ===== MOBILE OPTIMIZATIONS ===== */
       /* Media query for mobile devices (max-width: 480px) */
       @media screen and (max-width: 480px) {
-        /* Profile image size for mobile */
+        /* Logo size for smaller screens */
+        .u-logo-image {
+          width: 100px !important;
+        }
+
+        /* Profile image container for mobile */
+        .u-container-layout-1 {
+          margin-top: 20px !important;
+          gap: 0 !important;
+          padding: 0 !important;
+        }
+
+        /* Profile image size for smaller screens */
         .u-image-1 {
           width: 240px !important;
-          height: 297px !important;
+          height: auto !important;
+          margin: 0 auto !important;
         }
-        
-        /* Text size adjustments for mobile */
-        .u-text-1 span[style*="font-size: 35px"] {
-          font-size: 24px !important;
+
+        /* Social buttons container for smaller screens */
+        .u-container-layout-1 > div {
+          flex-direction: column !important;
+          gap: 10px !important;
+          margin: 20px auto !important;
         }
-        .u-text-1 span[style*="font-size: 45px"] {
-          font-size: 28px !important;
+
+        /* Set exactly 3cm gap between profile image and paragraph */
+        .u-layout-cell-2 {
+          margin-top: 113px !important; /* 3cm = 113px */
+          padding: 0 !important;
+        }
+
+        /* Remove all other margins and paddings */
+        .u-text-1 {
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+
+        .u-container-layout-2 {
+          padding: 0 !important;
+        }
+
+        .u-layout-cell {
+          padding: 0 !important;
         }
       }
     </style>
