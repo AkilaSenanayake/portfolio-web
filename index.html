@@ -556,4 +556,45 @@ var sc_security="d34c140e"; </script>
       });
     </script>
     <div class="mobile-footer-text">2025 | Akila Senanayake. All rights reserved.</div>
+    
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-button">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-sidebar">
+      <ul class="mobile-nav">
+        <li><a href="index.html">home</a></li>
+        <li><a href="#about-section">about</a></li>
+        <li><a href="#sec-c7f0">blogs</a></li>
+        <li><a href="https://www.linkedin.com/in/akila-senanayake/details/projects/" target="_blank">projects</a></li>
+        <li><a href="#contact-section">contact</a></li>
+        <li><a href="https://www.linkedin.com/in/akila-senanayake/" target="_blank">connect in</a></li>
+      </ul>
+    </div>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay"></div>
+
+    <script>
+      // Mobile menu functionality
+      const mobileMenuButton = document.querySelector('.mobile-menu-button');
+      const mobileSidebar = document.querySelector('.mobile-sidebar');
+      const mobileOverlay = document.querySelector('.mobile-overlay');
+
+      mobileMenuButton.addEventListener('click', () => {
+        mobileSidebar.classList.toggle('active');
+        mobileOverlay.classList.toggle('active');
+        document.body.style.overflow = mobileSidebar.classList.contains('active') ? 'hidden' : '';
+      });
+
+      mobileOverlay.addEventListener('click', () => {
+        mobileSidebar.classList.remove('active');
+        mobileOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    </script>
 </body></html>
